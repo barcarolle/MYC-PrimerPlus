@@ -8,7 +8,7 @@ private:
   char name[MAX];
   
 public: 
-  Plorg();
-  void change(Plorg & m, int n);
-  void report();
-}
+  Plorg(const char * name = "Plorga");
+	void changeCI(int CI);
+	void show(void) const; // prints name and CI to standard output
+};
