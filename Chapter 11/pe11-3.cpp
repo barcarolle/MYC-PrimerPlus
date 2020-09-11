@@ -20,6 +20,7 @@ int main()
   cin >> NUM;
   
   int combination[NUM];
+  int * highest, * lowest, average, sum = 0;
   
   cout << "Enter target distance (q to quit): ";
   cin >> target;
@@ -39,8 +40,34 @@ int main()
     }
     
     combination[i] = steps;
-    
+    steps = 0;
   }
+  
+  highest = combination[0];
+  for(i = 1; i < NUM; i++)
+  {
+    if (combination[i] > highest)
+      highest = combination[i];
+  }
+  cout << "Highest number of steps is: " << highest;
+  
+  lowest = combination[0];
+  for(i = 1; i < NUM; i++)
+  { 
+    if (combination[i] < lowest)
+      lowest = combination[i];
+  }
+  cout << "Lowest number of stesps is: " << lowest;
+  
+  for(i = 0; i < NUM; i++)
+    sum += combination[i];
+  
+  average = sum / NUM;
+  
+  cout << "Average steps are: " << average;
+  
+  return 0;
+}
   
   
   
