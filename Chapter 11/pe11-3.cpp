@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "vect.h"
+#include "vect2.h"
 
 int main()
 {
